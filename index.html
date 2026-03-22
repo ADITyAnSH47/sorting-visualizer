@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pro Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Sorting Visualization</h2>
+
+<div class="controls">
+    <button id="pauseBtn" onclick="togglePause()">⏸️ Pause</button>
+<button id="stepBtn" onclick="stepForward()" disabled>⏭️ Step</button>
+  <input type="text" id="userArray" placeholder="e.g. 5,3,8,1">
+  <button onclick="useUserArray()">Use Array</button>
+  <button onclick="generateArray()">Random Array</button>
+  <button onclick="startComparison()">Start Race</button>
+
+  <div class="select-group">
+    <select id="algo1"></select>
+    <select id="algo2"></select>
+    <select id="algo3"></select>
+    <select id="algo4"></select>
+  </div>
+  
+  <div class="slider-group">
+    <label for="speedSlider">Speed:</label>
+    <input type="range" id="speedSlider" min="1" max="100" value="70">
+  </div>
+</div>
+
+<div class="container">
+  <div class="panel">
+    <div class="panel-header">
+      <h3 id="name1">ALGO 1</h3>
+      <div class="stats"><span id="bigO1"></span> <span id="time1"></span></div>
+    </div>
+    <div id="array1" class="array-container"></div>
+  </div>
+  
+  <div class="panel">
+    <div class="panel-header">
+      <h3 id="name2">ALGO 2</h3>
+      <div class="stats"><span id="bigO2"></span> <span id="time2"></span></div>
+    </div>
+    <div id="array2" class="array-container"></div>
+  </div>
+  
+  <div class="panel">
+    <div class="panel-header">
+      <h3 id="name3">ALGO 3</h3>
+      <div class="stats"><span id="bigO3"></span> <span id="time3"></span></div>
+    </div>
+    <div id="array3" class="array-container"></div>
+  </div>
+  
+  <div class="panel">
+    <div class="panel-header">
+      <h3 id="name4">ALGO 4</h3>
+      <div class="stats"><span id="bigO4"></span> <span id="time4"></span></div>
+    </div>
+    <div id="array4" class="array-container"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
